@@ -1,0 +1,27 @@
+button{
+    background-color: rgb(8, 107, 193);
+    width: max-content;
+    padding: 5px;
+    margin: 2px;
+    color: white;
+    border-radius: 8px;
+    border-color: rgb(8, 107, 193);
+    cursor: pointer;
+    box-shadow: inset;
+}
+
+*{
+    font-family: sans-serif;
+    background-color: aquamarine;
+    text-align: center;
+    cursor: auto;
+}
+
+input{
+    width: 95vw;
+    border-radius: 8px;
+    background-color: white;
+    padding: 5px;
+    margin: 2px;
+    outline: black;
+}
