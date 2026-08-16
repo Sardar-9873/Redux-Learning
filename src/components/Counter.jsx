@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { CLEAR, DECREMENT, INCREMENT, MANUAL } from "../redux/constants/counterConstants";
-import { Clear, Decrement, Increment, Manual } from "../redux/actions/counterActions";
+// import { Clear, Decrement, Increment, Manual } from "../redux/actions/counterActions";
 import { useRef, useState } from "react";
+import { clear, decrement, increment, manual } from "../redux/slices/counterSlice";
 
 function Counter() {
 
@@ -34,9 +35,9 @@ function Counter() {
 
             {/* Counter Actions */}
 
-            <button onClick={() => { dispatch(Increment(null)) }} id={INCREMENT}>{INCREMENT}</button>
-            <button onClick={() => { dispatch(Decrement(null)) }} id={DECREMENT}>{DECREMENT}</button>
-            <button onClick={() => { dispatch(Clear(null)) }} id={CLEAR}>{CLEAR}</button>
+            <button onClick={() => { dispatch(increment(null)) }} id={INCREMENT}>{INCREMENT}</button>
+            <button onClick={() => { dispatch(decrement(null)) }} id={DECREMENT}>{DECREMENT}</button>
+            <button onClick={() => { dispatch(clear(null)) }} id={CLEAR}>{CLEAR}</button>
             <button onClick={() => { setManualNumberAdding(!manualNumberAdding) }} id={MANUAL}>{MANUAL}</button>
 
             {/* Counter Actions End */}
@@ -54,7 +55,7 @@ function Counter() {
                         placeholder="Manual Number for Adding in counter"
                         onChange={(e) => { setManualCounter(e.target.value) }}
                     />
-                    <button id="add-manual" onClick={() => { dispatch(Manual(Number(manualCounter))); setManualNumberAdding(false) }}>Add Manual</button>
+                    <button id="add-manual" onClick={() => { dispatch(manual(+manualCounter)); setManualNumberAdding(false) }}>Add Manual</button>
                 </>}
 
 

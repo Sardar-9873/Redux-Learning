@@ -4,7 +4,7 @@ const initialStateForCounter = {
     count: 0,
     loading: false,
     error: false
-}
+};
 
 export default function counterReducer(state = initialStateForCounter, action) {
 

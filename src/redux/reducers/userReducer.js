@@ -8,7 +8,7 @@ const initialStateForUser = {
     },
     loading: false,
     error: false
-}
+};
 
 export default function userReducer(state = initialStateForUser, action) {
 
